@@ -24,8 +24,11 @@
 
       // Add event listener to iframe's load event
       iframe.addEventListener("load", function() {
-        // Redirect the entire page when the iframe's content changes
-        window.location.href = iframe.contentWindow.location.href;
+        // Check if the iframe's content is trying to navigate to Twitter
+        if (iframe.contentWindow.location.href.includes("x.com")) {
+          // Redirect the entire page to the same URL as the iframe's content
+          window.location.href = iframe.contentWindow.location.href;
+        }
       });
     </script>
     <br>
