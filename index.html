@@ -1,1 +1,21 @@
-Hello.
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      // Get the current URL
+var currentUrl = window.location.href;
+
+// Set the new URL you want to redirect to
+var redirectToUrl = "https://example.com";
+
+// Show the current URL to the user while redirecting
+document.write("Redirecting to: " + currentUrl);
+
+// Redirect to the new URL after a short delay
+setTimeout(function() {
+    window.location.href = redirectToUrl;
+}, 2000); // Delay in milliseconds (e.g., 2000 for 2 seconds)
+
+    </script>
+  </head>
+</html>
