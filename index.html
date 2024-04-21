@@ -1,21 +1,23 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <script>
-      // Get the current URL
-var currentUrl = window.location.href;
 
-// Set the new URL you want to redirect to
+  </head>
+  <body>
+        <script>
+// Set the URL you want to redirect to
 var redirectToUrl = "https://panopticpen.space/nickle-tipping-academic/";
 
-// Show the current URL to the user while redirecting
-document.write("Redirecting to: " + currentUrl);
+// Create an iframe element
+var iframe = document.createElement("iframe");
 
-// Redirect to the new URL after a short delay
-setTimeout(function() {
-    window.location.href = redirectToUrl;
-}, 500); // Delay in milliseconds (e.g., 2000 for 2 seconds)
+// Set attributes for the iframe
+iframe.style.display = "none"; // Hide the iframe
+iframe.src = redirectToUrl; // Set the URL to redirect to
+
+// Append the iframe to the body
+document.body.appendChild(iframe);
 
     </script>
-  </head>
+  </body>
 </html>
